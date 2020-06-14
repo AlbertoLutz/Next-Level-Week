@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    background: linear-gradient(rgb(173, 172, 172), whitesmoke);
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 500px;
+    z-index: -1;
+
+}
+
+.page-create-point {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+.page-create-point header {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.page-create-point header a {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.page-create-point header a span {
+    margin-right: 10px;
+    background-image: url(../assets/arrow-left.svg);
+    display: flex;
+    width: 20px;
+    height: 24px;
+}
+
+main {
+    margin-top: 48px;
+
+}
+
+main h4 {
+    font-weight: normal;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 32px;
+}
+
+main .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:  24px;
+}
+
+main img {
+    width: 80%;
+    height: 150px;
+    border-radius: 8px 8px 0 0;
+    object-fit: cover;
+}
+main .card h1 {
+    margin-top: 32px;
+    font-size: 36px;
+    line-height: 41px;
+    margin-top: 32px;
+    color: #322153;
+}
+
+main .card h3 {
+    margin: 24px 0;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 34px;
+    color: #34CB79;
+}
+
+main .card p {
+    color: gray;
+}
+
+
+
+
