@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% set bodyId = "page-create-point" %}
+
+{% block title %}
+ <title>Criar um Ponto de Coleta</title>
+{% endblock title %}
+    
+
+{% block styles %}
+     <link rel="stylesheet" href="/css/search-results.css">
+     <link rel="stylesheet" href="/css/styles.css">
+     <link rel="stylesheet" href="/css/create-point.css">
+{% endblock styles %}
+
+      {% block content %}
+       {% include "partials/page-header.html" %}
+
+        <main>
+
+        {% if total > 0 %}
+       
+
+           <h4>
+               <strong>{{total}} pontos </strong>encontrados
+           </h4>
+
+            <div class="cards">
+
+         {% for place in places %}
+
+           <div class="card">
+                    <img src="{{ place.image }}" alt="{{ place.name }}">
+                    <h1>{{ place.name }}</h1>
+                    <h3>{{ place.items }}</h3>
+                    <p>
+                        {{ place.city }}, {{ place.state }} 
+                        <br/>
+                        {{ place.adress }}
+                        <br/>
+                        {{ place.adress2 }}
+                    </p>
+                </div>
+         {% endfor %}                      
+
+                
+            </div>
+
+            {% else %}
+
+            <h4>Nenhum ponto de coleta encontrado</h4>
+
+         {% endif %}
+            
+        </main>
+      
+     {% endblock content %}
+
+    
+
+
+
+
+
+
